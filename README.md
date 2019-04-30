@@ -15,3 +15,9 @@ Aplikacija BankaStudent ima za cilj da organizuje, nadgleda, pomaže, upućuje i
 #### Projekat se sastoji od 2 dijela: UWP dio i Web aplikacija.
 
 ![alt text](https://github.com/malkocahmed/student-bank/blob/master/readme%20slike/uwp.png)
+
+![alt text](https://github.com/malkocahmed/student-bank/blob/master/readme%20slike/hp.png)
+
+![alt text](https://github.com/malkocahmed/student-bank/blob/master/readme%20slike/login.png)
+
+

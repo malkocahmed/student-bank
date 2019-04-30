@@ -1,0 +1,34 @@
+﻿
+1) SINGLETON
+
+- Singleton pattern koristimo za klase koje zelimo instancirati samo jedanput. Cesto se koristi za objekte koji rade sa thread
+pool-ovima, drajverima. Lazy singleton: objekat se instancira tek pri prvom korištenju objekta.
+Postize se na nacin da se doda static privatni konstruktor, da ima privatnu staticku instancu iste te klase,
+metodu getInstance() koja vraca tu instancu, te privatni konstruktor bez parametara tako da se instanca moze kreirati samo ovom klasom.
+Ovaj patern nije iskoristen, mogli bi ga iskoristiti da se kreira samo jedna instanca klase Baza, koja radi sa bazom.
+
+2) STRATEGY 
+- Strategy pattern koristimo da izdvojimo razlicite algoritme (rjesenja/strategije) i stavimo ih u posebne klase. Koristi se kada
+imamo vise algoritama za jedan problem. Koristimo ga tako da napravimo interface koji definise neku obaveznu metodu, 
+zatim implementiramo za sve algoritme po klasu koja implementira taj interface. Ovaj patern nije iskoristen, mogao bi se 
+iskoristiti ako npr. zelimo heshirati sifre/lozinke korisnika, za koje postoje razliciti hashevi.
+
+3) Prototype patern: ako imamo neki objekat za koji je trosak kreiranja velik, ovim paternom vrsimo kloniranje vec postojeceg objekta. Podrzani su i shallow i deep kopiranje. Implementiramo ga tako sto deklariramo abstraktnu baznu klasu
+koja specificira cistu virtualnu clone() metodu. Svaka klasa kojoj je potreban polimorfni konstruktor nasljedjuje ovu klasu te implementira clone() funkcionalnost. Ovaj patern nije iskoristin, niti ima igdje potrebe da se iskoristi u nasem projektu.
+
+4) Observer patern: ako je potrebno uspostaviti relaciju izmeðu objekata tako da kada se stanje jednog objekta promijeni vezani 
+objekti dobiju obavijest. Implementiramo tako sto uvedemo Subject i Observer klasu, te IObserver interface (on sadrzi samo metodu Update koja koja se poziva nakon promjene stanja neke Subject instance). Subject klasa sadrži privatni dogaðaj Notify, koji predstavlja Event mehanizam za pozivanje Update metode za sve posmatrace. Patern bi se mogao iskoristiti da bi se npr. promijenilo novcano stanje korisnika kada se ono promijeni kroz transakciju iniciranu od drugog korisnika.
+
+5)
+Iterator pattern se koristi kada ћelimo uniformno pristupati bilo kojoj kolekciji bez poznavanja njene strukture.
+On takodjer omogucava bolji polimorfizam i skracivanje koda. .NET Framework koristi specijalne interfejse koji podrћavaju jednostavnu 
+iteraciju, System.Collections.IEnumerator i System.Collections.Generic.IEnumerator<T>. foreach petlja je dizajnirana tako da se 
+jednostavno iterira kroz kolekcije koje podrzavaju ove interfejse. Ovaj patern nije iskoriљten u nasem projektu, zbog nepostojanja 
+nekih posebnih/custom koleckija nema potrebe za njim, a za jednostavne primjene nam .NET pruza podrsku.
+
+6) 
+Proxy pattern odvaja interfejs od implementacije. On omoguжava pristup i kontrolu pristupa stvarnim objektima. Moћe se koristiti i za 
+klase koje imaju spore operacije ili osjetljive podatke.  Koristi se objekat posrednik, on prihvata i donosi odluke kod zahtjeva 
+za pristup stvarnom objektu. Nije jos koriљten u nasoj aplikaciji, moћe se koristiti kod dodjeljivanja privilegija korisnicima, buduci da 
+i administrator i uposlenici mogu vidjeti sve korisnike, ali samo administrator moћe dodjeljivati privilegije.
+

@@ -1,0 +1,171 @@
+﻿<Page
+    x:Class="StudentskaBanka.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudentskaBanka"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:StudentskaBanka.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="Blue" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" RenderTransformOrigin="0.835,0.711">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="A.Text" Value="AAAAAAA"/>-->
+                        <Setter Target="PanelLogo.Margin" Value="0,0,0,35"/>
+
+                        <Setter Target="bankLogo.Width" Value="220"/>
+                        <Setter Target="bankLogo.Margin" Value="0,0,0,12"/>
+
+                        <Setter Target="textBlockSlogan.FontSize" Value="16"/>
+
+                        <Setter Target="textBlockDobrodosli.FontSize" Value="16"/>
+
+                        <Setter Target="buttonLogin.Height" Value="40"/>
+                        <Setter Target="buttonLogin.Width" Value="180"/>
+                        <Setter Target="buttonLogin.FontSize" Value="18"/>
+
+                        <Setter Target="textBlockDobrodosli.Margin" Value="0,0,0,3"/>
+
+                        <Setter Target="registracijaPanel.Margin" Value="0,5,0,0"/>
+
+                        <Setter Target="textBlockPitanje.Margin" Value="0,0,5,0"/>
+                        <Setter Target="textBlockPitanje.FontSize" Value="15"/>
+                        <Setter Target="hypelinkRegistracija.FontSize" Value="15"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="A.Text" Value="AAAAAAA"/>-->
+                        <Setter Target="GlavniPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="PanelLogo.Margin" Value="0,0,33,0"/>
+                        <Setter Target="PanelLogin.VerticalAlignment" Value="Center"/>
+
+                        <Setter Target="bankLogo.Width" Value="270"/>
+                        <Setter Target="bankLogo.Margin" Value="0,0,0,15"/>
+
+                        <Setter Target="textBlockSlogan.FontSize" Value="19"/>
+
+                        <Setter Target="buttonLogin.Height" Value="50"/>
+                        <Setter Target="buttonLogin.Width" Value="200"/>
+                        <Setter Target="buttonLogin.FontSize" Value="20"/>
+
+                        <Setter Target="textBlockDobrodosli.FontSize" Value="19"/>
+                        <Setter Target="textBlockDobrodosli.Margin" Value="0,-20,0,10"/>
+
+                        <Setter Target="registracijaPanel.Margin" Value="0,10,0,0"/>
+
+                        <Setter Target="textBlockPitanje.Margin" Value="0,0,6,0"/>
+                        <Setter Target="textBlockPitanje.FontSize" Value="17"/>
+                        <Setter Target="hypelinkRegistracija.FontSize" Value="17"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1050"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--<Setter Target="A.Text" Value="AAAAAAA"/>-->
+                        <Setter Target="GlavniPanel.Orientation" Value="Horizontal"/>
+                        <Setter Target="PanelLogo.Margin" Value="0,0,80,0"/>
+                        <Setter Target="PanelLogin.VerticalAlignment" Value="Center"/>
+
+                        <Setter Target="bankLogo.Width" Value="290"/>
+                        <Setter Target="bankLogo.Margin" Value="0,0,0,15"/>
+
+                        <Setter Target="textBlockSlogan.FontSize" Value="23"/>
+
+                        <Setter Target="buttonLogin.Height" Value="58"/>
+                        <Setter Target="buttonLogin.Width" Value="233"/>
+
+                        <Setter Target="textBlockDobrodosli.Margin" Value="0,-20,0,12"/>
+                        <Setter Target="textBlockDobrodosli.FontSize" Value="23"/>
+                        <Setter Target="buttonLogin.FontSize" Value="22"/>
+
+                        <Setter Target="registracijaPanel.Margin" Value="0,15,0,0"/>
+
+                        <Setter Target="textBlockPitanje.Margin" Value="0,0,10,0"/>
+                        <Setter Target="textBlockPitanje.FontSize" Value="20"/>
+                        <Setter Target="hypelinkRegistracija.FontSize" Value="22"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel Name="GlavniPanel"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+        >
+            <StackPanel Name="PanelLogo">
+                <!--<TextBlock Name="A"></TextBlock>-->
+                <Image Name="bankLogo"
+                       Source="ms-appx:///Assets/tsb_logo.jpg"
+                       HorizontalAlignment="Center"
+                />
+                <TextBlock Name="textBlockSlogan"
+                        Text="The Student Bank - You are richer than you think"
+                        HorizontalAlignment="Center"
+                        FontFamily="Segoe UI"
+                        FontStyle="Normal"
+                        FontWeight="Light"
+                        Foreground="White"
+                />
+            </StackPanel>
+            <StackPanel Name="PanelLogin">
+                <!-- Nije radio VertAlignm=Center kad bi stavio u ova dva elementa -->
+                <TextBlock Name="textBlockDobrodosli"
+                        Text="Dobrodošli na službenu aplikaciju banke Student!"
+                        HorizontalAlignment="Center"
+                        FontFamily="Segoe UI"
+                        FontStyle="Normal"
+                        FontWeight="Light"
+                        Foreground="White"                        
+                />
+                <Button Name="buttonLogin"
+                        Command="{Binding Path=PrijaviSe}"
+                        Content="Login"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        Background="LightGoldenrodYellow"
+                        FontFamily="Segoe UI"
+                        FontWeight="Medium"
+                        Foreground="Blue"
+                />
+                <StackPanel Name="registracijaPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Name="textBlockPitanje"
+                            VerticalAlignment="Center"
+                            Text="Niste registrovani?"
+                            FontFamily="Segoe UI"
+                            FontWeight="Light"
+                            Foreground="LightGoldenrodYellow"
+                    />
+                    <HyperlinkButton Name="hypelinkRegistracija"
+                            Command="{Binding Path=RegistrujSe}"
+                            VerticalAlignment="Center"
+                            Content="Kliknite ovdje za registraciju"
+                            FontFamily="Segoe UI"
+                            FontWeight="Light"
+                            Foreground="LightGoldenrodYellow"
+                    />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Page>
+
+
+

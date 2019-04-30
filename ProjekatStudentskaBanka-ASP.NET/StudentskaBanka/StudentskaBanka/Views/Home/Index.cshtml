@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    body {
+        background-color: lightblue;
+        background-image: url(https://images.unsplash.com/photo-1500316124030-4cffa46f10f0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c3583c9e0a39944ac510280a55bcc0b&auto=format&fit=crop&w=1500&q=80);
+        background-size: 1400px 1000px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .jumbotron {
+        background-color: black;
+        height: 300px;
+        font-family: 'DejaVu Sans';
+        color: lightgoldenrodyellow;
+    }
+
+    .linkovi {
+        color: black;
+    }
+
+    h2 {
+        color: azure;
+    }
+
+    p {
+        color: gray;
+    }
+</style>
+<div class="jumbotron">
+    <h2>Dobrodošli na službenu aplikaciju Studentske banke, uživajte!</h2>
+    <p class="lead">
+        Naša banka ima za cilj da organizuje, nadgleda, pomaže, upućuje i vodi računa o
+        jednom studentu, konkretno njegovim finansijama i novcem kojim raspolaže. Uvjerite se sami. Niste registrovani?
+    </p>
+    <p><a onclick="window.location.href='@Url.Action("Create","Korisniks")'" class="btn btn-primary btn-lg">Registracija &raquo;</a></p>
+</div>
+
+<div class="row">
+
+    <style>
+        h3 {
+            font-family: 'DejaVu Sans';
+        }
+
+        p {
+            font-family: 'DejaVu Sans';
+        }
+    </style>
+
+
+    <div class="col-md-4">
+        <h3 style="color:azure">Konvertor valuta</h3>
+        <p style="color:lightblue">
+            Besplatno koristite funkcionalnost pretvaranja iznosa iz jedne valute u drugu. Trenutno dostupne valute su
+            konvertibilna marka (BAM), euro i dolar.
+        </p>
+        <p><a class="btn btn-primary btn-default" href="https://raiffeisenbank.ba/konvertor-valuta">Konvertor &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3 style="color:azure">Kursna lista</h3>
+        <p style="color:lightblue">
+            Pogledajte trenutnu vrijednost stranih valuta ili deviza u odnosu na domaću, konvertibilnu marku.
+            Kursna lista se osvježava svaki radni dan.
+        </p>
+        <p><a class="btn btn-primary btn-default" href="https://www.cbbh.ba/CurrencyExchange/">Kursna lista &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3 style="color:azure">Internet bankarstvo</h3>
+        <p style="color:lightblue">
+            Besplatno se registrujte i sa dodjeljenim računom koristite niz funkcionalnosti koje banka pruža. Vršite transakcije,
+            štedite novac i pratite nagrade i bonuse za najvrjednije studente.
+        </p>
+        <p><a class="btn btn-primary btn-default" onclick="window.location.href='@Url.Action("PrijaviSe","Home")'">eBank &raquo;</a></p>
+    </div>
+
+</div>

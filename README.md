@@ -1,9 +1,5 @@
 ## Tema: Studentska banka 
-Projekat je rađen u sklopu predmeta Objektno Orijentisana Analiza i Dizajn. Članovi tima:
-
-1. Malkoč Ahmed
-2. Mešić Ferhad
-3. Šišić Nedim
+Projekat je rađen u sklopu predmeta Objektno Orijentisana Analiza i Dizajn unutar tročlanog tima.
 
 ### Opis teme
 --- 

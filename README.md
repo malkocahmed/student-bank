@@ -1,4 +1,4 @@
-## Tema: Studentska banka 
+## Studentska banka 
 Projekat je rađen u sklopu predmeta Objektno Orijentisana Analiza i Dizajn unutar tročlanog tima.
 
 ### Opis teme
